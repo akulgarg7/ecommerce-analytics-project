@@ -10,7 +10,7 @@ An end-to-end data analytics and engineering project that processes raw e-commer
 * **Bonus (ML):** Scikit-Learn (K-Means Clustering)
 
 ## 🚀 How to Run the Project
-1. Clone the repository: `git clone <your-repo-link>`
+1. Clone the repository: `git clone (https://github.com/akulgarg7/ecommerce-analytics-project)`
 2. Create a virtual environment and activate it.
 3. Install dependencies: `pip install -r requirements.txt`
 4. Setup the database using the schema in `/sql/schema.sql`
@@ -19,4 +19,3 @@ An end-to-end data analytics and engineering project that processes raw e-commer
 ## 📊 Business Questions Answered
 * Which products generate the highest revenue?
 * What is the monthly sales trend?
-* (Add more as we build...)
