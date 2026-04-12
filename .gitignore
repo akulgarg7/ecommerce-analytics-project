@@ -2,6 +2,7 @@
 venv/
 env/
 __pycache__/
+*.pyc
 
 # Data (Never commit raw or sensitive data)
 data/
