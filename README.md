@@ -12,11 +12,11 @@ E-commerce platforms often struggle to balance freight costs with customer satis
 ## 🛠️ The Tech Stack & Architecture 
 This project demonstrates a complete data pipeline, from raw data ingestion to executive reporting. 
 * **Backend & Data Engineering:** Python, Pandas
- * *Impact:* Engineered an Automated Data Ingestion and Integrity Pipeline. Built CLI logic to validate raw CSV datasets, enforce data types, and quarantine corrupted records before analysis.
+     * *Impact:* Engineered an Automated Data Ingestion and Integrity Pipeline. Built CLI logic to validate raw CSV datasets, enforce data types, and quarantine corrupted records before analysis.
 * **Database & Querying:** SQL (MySQL)
- * *Impact:* Structured and queried relational tables for exploratory data analysis (EDA).
+     * *Impact:* Structured and queried relational tables for exploratory data analysis (EDA).
 * **Analytics & Visualization:** Power BI, DAX
- * *Impact:* Developed a 5-page interactive dashboard utilizing complex DAX measures, What-If parameters, and dynamic cross-filtering.
+    * *Impact:* Developed a 5-page interactive dashboard utilizing complex DAX measures, What-If parameters, and dynamic cross-filtering.
 
 --- 
 
