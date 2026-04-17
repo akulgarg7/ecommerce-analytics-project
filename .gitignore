@@ -11,6 +11,3 @@ data/
 
 # Secrets
 .env
-
-# dashboards
-*.pbix
