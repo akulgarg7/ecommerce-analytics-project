@@ -124,6 +124,31 @@ def build_master_dataset(orders, customers, products, items, payments, sellers, 
 
     # 4. KPIs
     master_df = add_kpi_columns(master_df)
+
+    master_df = validate_and_quarantine(master_df)
     
     print(f"Master dataset built successfully! Total rows: {len(master_df)}")
     return master_df
+
+def validate_and_quarantine(master_df):
+    """
+    Enforces data integrity by intercepting mathematically impossible 
+    or structurally broken records, quarantining them to an error log.
+    """
+    print("Running integrity checks and quarantining bad data...")
+    
+    invalid_keys_mask = master_df['order_id'].isnull() | master_df['customer_id'].isnull()
+    invalid_math_mask = master_df['freight_value'] < 0
+    
+    total_failure_mask = invalid_keys_mask | invalid_math_mask
+    
+    corrupted_records = master_df[total_failure_mask]
+    clean_records = master_df[~total_failure_mask]
+    
+    if len(corrupted_records) > 0:
+        corrupted_records.to_csv('../data/processed/quarantine_log.csv', index=False)
+        print(f"WARNING: {len(corrupted_records)} corrupted records quarantined.")
+    else:
+        print("All records passed integrity checks.")
+        
+    return clean_records
